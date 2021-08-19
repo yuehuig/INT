@@ -1,0 +1,6 @@
+framework module Pods_INT {
+  umbrella header "Pods-INT-umbrella.h"
+
+  export *
+  module * { export * }
+}
