@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		5B80C3B84892A58ABDD6B09F /* Pods_INT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9380BAFB751BD738B0B8B8 /* Pods_INT.framework */; };
+		D91848E426D33A120078C55C /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = D91848E326D33A120078C55C /* Person.m */; };
+		D92B785826D6870B00217013 /* ThreadController.m in Sources */ = {isa = PBXBuildFile; fileRef = D92B785726D6870B00217013 /* ThreadController.m */; };
+		D92B785B26D689A000217013 /* YHThread.m in Sources */ = {isa = PBXBuildFile; fileRef = D92B785A26D689A000217013 /* YHThread.m */; };
+		D994308C26D8E3D500950695 /* RuntimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D994308B26D8E3D500950695 /* RuntimeController.m */; };
+		D9A71D8E26DCBED600A1AE3F /* KeyWordController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A71D8D26DCBED600A1AE3F /* KeyWordController.m */; };
+		D9B6455926E2123F00F56C8C /* MemoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B6455826E2123F00F56C8C /* MemoryController.m */; };
+		D9B6455C26E212AC00F56C8C /* AssociatedController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B6455B26E212AC00F56C8C /* AssociatedController.m */; };
 		D9BB4F6926CE2E7A00BB7914 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9BB4F6826CE2E7A00BB7914 /* Assets.xcassets */; };
 		D9BB4F6C26CE2E7A00BB7914 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9BB4F6A26CE2E7A00BB7914 /* LaunchScreen.storyboard */; };
 		D9BB4F7626CE2EC100BB7914 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BB4F7426CE2EC100BB7914 /* AppDelegate.swift */; };
@@ -33,7 +40,21 @@
 /* Begin PBXFileReference section */
 		4D9380BAFB751BD738B0B8B8 /* Pods_INT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_INT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BBB6EC7DE8902F55995EC27 /* Pods-INT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INT.debug.xcconfig"; path = "Target Support Files/Pods-INT/Pods-INT.debug.xcconfig"; sourceTree = "<group>"; };
+		D91848E226D33A120078C55C /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		D91848E326D33A120078C55C /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		D92B785626D6870B00217013 /* ThreadController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadController.h; sourceTree = "<group>"; };
+		D92B785726D6870B00217013 /* ThreadController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadController.m; sourceTree = "<group>"; };
+		D92B785926D689A000217013 /* YHThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHThread.h; sourceTree = "<group>"; };
+		D92B785A26D689A000217013 /* YHThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHThread.m; sourceTree = "<group>"; };
 		D9473B45EEE48E5E481CDEB7 /* Pods-INT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INT.release.xcconfig"; path = "Target Support Files/Pods-INT/Pods-INT.release.xcconfig"; sourceTree = "<group>"; };
+		D994308A26D8E3D500950695 /* RuntimeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeController.h; sourceTree = "<group>"; };
+		D994308B26D8E3D500950695 /* RuntimeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeController.m; sourceTree = "<group>"; };
+		D9A71D8C26DCBED600A1AE3F /* KeyWordController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyWordController.h; sourceTree = "<group>"; };
+		D9A71D8D26DCBED600A1AE3F /* KeyWordController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyWordController.m; sourceTree = "<group>"; };
+		D9B6455726E2123F00F56C8C /* MemoryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryController.h; sourceTree = "<group>"; };
+		D9B6455826E2123F00F56C8C /* MemoryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryController.m; sourceTree = "<group>"; };
+		D9B6455A26E212AC00F56C8C /* AssociatedController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssociatedController.h; sourceTree = "<group>"; };
+		D9B6455B26E212AC00F56C8C /* AssociatedController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssociatedController.m; sourceTree = "<group>"; };
 		D9BB4F5C26CE2E7700BB7914 /* INT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = INT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9BB4F6826CE2E7A00BB7914 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9BB4F6B26CE2E7A00BB7914 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -94,6 +115,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D91848E126D33A000078C55C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D91848E226D33A120078C55C /* Person.h */,
+				D91848E326D33A120078C55C /* Person.m */,
+				D92B785926D689A000217013 /* YHThread.h */,
+				D92B785A26D689A000217013 /* YHThread.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D9BB4F5326CE2E7700BB7914 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +147,7 @@
 		D9BB4F5E26CE2E7700BB7914 /* INT */ = {
 			isa = PBXGroup;
 			children = (
+				D91848E126D33A000078C55C /* Model */,
 				D9BB4F9126CE3F4E00BB7914 /* Business */,
 				D9BB4F7A26CE2EFF00BB7914 /* Home */,
 				D9BB4F7326CE2EC100BB7914 /* Main */,
@@ -183,6 +216,16 @@
 				D9BB4FA026CE45A800BB7914 /* BlockController.m */,
 				D9BB4FA226CE461000BB7914 /* EventResponderController.h */,
 				D9BB4FA326CE461000BB7914 /* EventResponderController.m */,
+				D92B785626D6870B00217013 /* ThreadController.h */,
+				D92B785726D6870B00217013 /* ThreadController.m */,
+				D994308A26D8E3D500950695 /* RuntimeController.h */,
+				D994308B26D8E3D500950695 /* RuntimeController.m */,
+				D9A71D8C26DCBED600A1AE3F /* KeyWordController.h */,
+				D9A71D8D26DCBED600A1AE3F /* KeyWordController.m */,
+				D9B6455726E2123F00F56C8C /* MemoryController.h */,
+				D9B6455826E2123F00F56C8C /* MemoryController.m */,
+				D9B6455A26E212AC00F56C8C /* AssociatedController.h */,
+				D9B6455B26E212AC00F56C8C /* AssociatedController.m */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -311,20 +354,27 @@
 			files = (
 				D9BB4F8E26CE369600BB7914 /* Bundle+YH.swift in Sources */,
 				D9BB4F9E26CE459300BB7914 /* RunLoopController.m in Sources */,
+				D9B6455926E2123F00F56C8C /* MemoryController.m in Sources */,
+				D91848E426D33A120078C55C /* Person.m in Sources */,
 				D9BB4F8526CE33C000BB7914 /* DescriptionProtocol.swift in Sources */,
 				D9BB4FA126CE45A800BB7914 /* BlockController.m in Sources */,
 				D9BB4F8826CE33C000BB7914 /* Define.swift in Sources */,
 				D9BB4F9026CE373800BB7914 /* CFunc.swift in Sources */,
 				D9BB4F7E26CE2F7E00BB7914 /* YHNavigationController.swift in Sources */,
 				D9BB4F7C26CE2F2000BB7914 /* HomeController.swift in Sources */,
+				D92B785826D6870B00217013 /* ThreadController.m in Sources */,
+				D9A71D8E26DCBED600A1AE3F /* KeyWordController.m in Sources */,
 				D9BB4F9526CE404F00BB7914 /* GCDController.m in Sources */,
 				D9BB4F9B26CE443A00BB7914 /* OCBaseController.m in Sources */,
+				D92B785B26D689A000217013 /* YHThread.m in Sources */,
 				D9BB4F8626CE33C000BB7914 /* Logging.swift in Sources */,
+				D994308C26D8E3D500950695 /* RuntimeController.m in Sources */,
 				D9BB4FA426CE461000BB7914 /* EventResponderController.m in Sources */,
 				D9BB4F7626CE2EC100BB7914 /* AppDelegate.swift in Sources */,
 				D9BB4F8726CE33C000BB7914 /* AppInfo.swift in Sources */,
 				D9BB4F7726CE2EC100BB7914 /* SceneDelegate.swift in Sources */,
 				D9BB4F7926CE2EDE00BB7914 /* BaseViewController.swift in Sources */,
+				D9B6455C26E212AC00F56C8C /* AssociatedController.m in Sources */,
 				D9BB4F8C26CE349400BB7914 /* UIColor+YH.swift in Sources */,
 				D9BB4F8926CE33C000BB7914 /* Style.swift in Sources */,
 			);
@@ -467,6 +517,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4L85SBL3VW;
 				INFOPLIST_FILE = INT/Info.plist;
@@ -490,6 +541,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4L85SBL3VW;
 				INFOPLIST_FILE = INT/Info.plist;

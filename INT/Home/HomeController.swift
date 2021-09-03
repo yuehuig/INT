@@ -14,7 +14,11 @@ class HomeController: BaseViewController {
         HomeListModel(name: "RunLoop", isOC: true),
         HomeListModel(name: "Block", isOC: true),
         HomeListModel(name: "EventResponder", isOC: true),
-//        HomeListModel(name: "GCD", isOC: true),
+        HomeListModel(name: "Thread", isOC: true),
+        HomeListModel(name: "Runtime", isOC: true),
+        HomeListModel(name: "KeyWord", isOC: true),
+        HomeListModel(name: "Memory", isOC: true),
+        HomeListModel(name: "Associated", isOC: true),
     ]
     
     override func viewDidLoad() {
