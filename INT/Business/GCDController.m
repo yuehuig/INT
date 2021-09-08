@@ -24,7 +24,26 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self test4];
+    [self test5];
+}
+
+- (void)test5 {
+    dispatch_queue_t concurrentQueue = dispatch_queue_create("test", DISPATCH_QUEUE_CONCURRENT);
+        for (NSInteger i = 0; i < 10; i++) {
+            dispatch_sync(concurrentQueue, ^{
+                NSLog(@"%zd",i);
+            });
+        }
+
+        dispatch_barrier_sync(concurrentQueue, ^{
+            NSLog(@"barrier");
+        });
+
+        for (NSInteger i = 10; i < 20; i++) {
+            dispatch_sync(concurrentQueue, ^{
+                NSLog(@"%zd",i);
+            });
+        }
 }
 
 /**

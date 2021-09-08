@@ -13,6 +13,11 @@
 		D92B785B26D689A000217013 /* YHThread.m in Sources */ = {isa = PBXBuildFile; fileRef = D92B785A26D689A000217013 /* YHThread.m */; };
 		D994308C26D8E3D500950695 /* RuntimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D994308B26D8E3D500950695 /* RuntimeController.m */; };
 		D9A71D8E26DCBED600A1AE3F /* KeyWordController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A71D8D26DCBED600A1AE3F /* KeyWordController.m */; };
+		D9ABFBFD26E7113300BAD835 /* CategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9ABFBFC26E7113300BAD835 /* CategoryController.m */; };
+		D9ABFC0026E84CE600BAD835 /* LeaksController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9ABFBFF26E84CE600BAD835 /* LeaksController.m */; };
+		D9ABFC0626E84D7E00BAD835 /* UIViewController+Leaks.m in Sources */ = {isa = PBXBuildFile; fileRef = D9ABFC0526E84D7E00BAD835 /* UIViewController+Leaks.m */; };
+		D9ABFC0C26E84F7100BAD835 /* YHHook.m in Sources */ = {isa = PBXBuildFile; fileRef = D9ABFC0B26E84F7100BAD835 /* YHHook.m */; };
+		D9ABFC0F26E85DD600BAD835 /* UINavigationController+Leaks.m in Sources */ = {isa = PBXBuildFile; fileRef = D9ABFC0E26E85DD600BAD835 /* UINavigationController+Leaks.m */; };
 		D9B6455926E2123F00F56C8C /* MemoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B6455826E2123F00F56C8C /* MemoryController.m */; };
 		D9B6455C26E212AC00F56C8C /* AssociatedController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B6455B26E212AC00F56C8C /* AssociatedController.m */; };
 		D9BB4F6926CE2E7A00BB7914 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9BB4F6826CE2E7A00BB7914 /* Assets.xcassets */; };
@@ -51,6 +56,16 @@
 		D994308B26D8E3D500950695 /* RuntimeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeController.m; sourceTree = "<group>"; };
 		D9A71D8C26DCBED600A1AE3F /* KeyWordController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyWordController.h; sourceTree = "<group>"; };
 		D9A71D8D26DCBED600A1AE3F /* KeyWordController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyWordController.m; sourceTree = "<group>"; };
+		D9ABFBFB26E7113300BAD835 /* CategoryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryController.h; sourceTree = "<group>"; };
+		D9ABFBFC26E7113300BAD835 /* CategoryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryController.m; sourceTree = "<group>"; };
+		D9ABFBFE26E84CE600BAD835 /* LeaksController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeaksController.h; sourceTree = "<group>"; };
+		D9ABFBFF26E84CE600BAD835 /* LeaksController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeaksController.m; sourceTree = "<group>"; };
+		D9ABFC0426E84D7E00BAD835 /* UIViewController+Leaks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Leaks.h"; sourceTree = "<group>"; };
+		D9ABFC0526E84D7E00BAD835 /* UIViewController+Leaks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Leaks.m"; sourceTree = "<group>"; };
+		D9ABFC0A26E84F7100BAD835 /* YHHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHHook.h; sourceTree = "<group>"; };
+		D9ABFC0B26E84F7100BAD835 /* YHHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHHook.m; sourceTree = "<group>"; };
+		D9ABFC0D26E85DD600BAD835 /* UINavigationController+Leaks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Leaks.h"; sourceTree = "<group>"; };
+		D9ABFC0E26E85DD600BAD835 /* UINavigationController+Leaks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Leaks.m"; sourceTree = "<group>"; };
 		D9B6455726E2123F00F56C8C /* MemoryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryController.h; sourceTree = "<group>"; };
 		D9B6455826E2123F00F56C8C /* MemoryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryController.m; sourceTree = "<group>"; };
 		D9B6455A26E212AC00F56C8C /* AssociatedController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssociatedController.h; sourceTree = "<group>"; };
@@ -192,6 +207,8 @@
 				D9BB4F8426CE33C000BB7914 /* Style.swift */,
 				D9BB4F8F26CE373800BB7914 /* CFunc.swift */,
 				D9BB4F9826CE410300BB7914 /* macro.h */,
+				D9ABFC0A26E84F7100BAD835 /* YHHook.h */,
+				D9ABFC0B26E84F7100BAD835 /* YHHook.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -226,6 +243,14 @@
 				D9B6455826E2123F00F56C8C /* MemoryController.m */,
 				D9B6455A26E212AC00F56C8C /* AssociatedController.h */,
 				D9B6455B26E212AC00F56C8C /* AssociatedController.m */,
+				D9ABFBFB26E7113300BAD835 /* CategoryController.h */,
+				D9ABFBFC26E7113300BAD835 /* CategoryController.m */,
+				D9ABFBFE26E84CE600BAD835 /* LeaksController.h */,
+				D9ABFBFF26E84CE600BAD835 /* LeaksController.m */,
+				D9ABFC0426E84D7E00BAD835 /* UIViewController+Leaks.h */,
+				D9ABFC0526E84D7E00BAD835 /* UIViewController+Leaks.m */,
+				D9ABFC0D26E85DD600BAD835 /* UINavigationController+Leaks.h */,
+				D9ABFC0E26E85DD600BAD835 /* UINavigationController+Leaks.m */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -352,6 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9ABFC0C26E84F7100BAD835 /* YHHook.m in Sources */,
 				D9BB4F8E26CE369600BB7914 /* Bundle+YH.swift in Sources */,
 				D9BB4F9E26CE459300BB7914 /* RunLoopController.m in Sources */,
 				D9B6455926E2123F00F56C8C /* MemoryController.m in Sources */,
@@ -361,6 +387,7 @@
 				D9BB4F8826CE33C000BB7914 /* Define.swift in Sources */,
 				D9BB4F9026CE373800BB7914 /* CFunc.swift in Sources */,
 				D9BB4F7E26CE2F7E00BB7914 /* YHNavigationController.swift in Sources */,
+				D9ABFC0F26E85DD600BAD835 /* UINavigationController+Leaks.m in Sources */,
 				D9BB4F7C26CE2F2000BB7914 /* HomeController.swift in Sources */,
 				D92B785826D6870B00217013 /* ThreadController.m in Sources */,
 				D9A71D8E26DCBED600A1AE3F /* KeyWordController.m in Sources */,
@@ -368,13 +395,16 @@
 				D9BB4F9B26CE443A00BB7914 /* OCBaseController.m in Sources */,
 				D92B785B26D689A000217013 /* YHThread.m in Sources */,
 				D9BB4F8626CE33C000BB7914 /* Logging.swift in Sources */,
+				D9ABFC0026E84CE600BAD835 /* LeaksController.m in Sources */,
 				D994308C26D8E3D500950695 /* RuntimeController.m in Sources */,
 				D9BB4FA426CE461000BB7914 /* EventResponderController.m in Sources */,
 				D9BB4F7626CE2EC100BB7914 /* AppDelegate.swift in Sources */,
 				D9BB4F8726CE33C000BB7914 /* AppInfo.swift in Sources */,
 				D9BB4F7726CE2EC100BB7914 /* SceneDelegate.swift in Sources */,
 				D9BB4F7926CE2EDE00BB7914 /* BaseViewController.swift in Sources */,
+				D9ABFC0626E84D7E00BAD835 /* UIViewController+Leaks.m in Sources */,
 				D9B6455C26E212AC00F56C8C /* AssociatedController.m in Sources */,
+				D9ABFBFD26E7113300BAD835 /* CategoryController.m in Sources */,
 				D9BB4F8C26CE349400BB7914 /* UIColor+YH.swift in Sources */,
 				D9BB4F8926CE33C000BB7914 /* Style.swift in Sources */,
 			);

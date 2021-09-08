@@ -23,7 +23,7 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self test3];
+    [self test1];
 }
 
 // result is 24, block type is <__NSMallocBlock__: 0x600000ac0210>

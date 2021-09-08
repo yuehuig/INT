@@ -19,6 +19,9 @@ class HomeController: BaseViewController {
         HomeListModel(name: "KeyWord", isOC: true),
         HomeListModel(name: "Memory", isOC: true),
         HomeListModel(name: "Associated", isOC: true),
+        HomeListModel(name: "Category", isOC: true),
+        HomeListModel(name: "Leaks", isOC: true),
+        
     ]
     
     override func viewDidLoad() {
