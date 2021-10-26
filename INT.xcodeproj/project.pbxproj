@@ -11,6 +11,8 @@
 		D91848E426D33A120078C55C /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = D91848E326D33A120078C55C /* Person.m */; };
 		D92B785826D6870B00217013 /* ThreadController.m in Sources */ = {isa = PBXBuildFile; fileRef = D92B785726D6870B00217013 /* ThreadController.m */; };
 		D92B785B26D689A000217013 /* YHThread.m in Sources */ = {isa = PBXBuildFile; fileRef = D92B785A26D689A000217013 /* YHThread.m */; };
+		D95B2E4F272651A8003D4001 /* ObserveController.m in Sources */ = {isa = PBXBuildFile; fileRef = D95B2E4E272651A8003D4001 /* ObserveController.m */; };
+		D97A6188271EDDF0005EF211 /* LockController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97A6187271EDDF0005EF211 /* LockController.m */; };
 		D994308C26D8E3D500950695 /* RuntimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D994308B26D8E3D500950695 /* RuntimeController.m */; };
 		D9A71D8E26DCBED600A1AE3F /* KeyWordController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A71D8D26DCBED600A1AE3F /* KeyWordController.m */; };
 		D9ABFBFD26E7113300BAD835 /* CategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9ABFBFC26E7113300BAD835 /* CategoryController.m */; };
@@ -52,6 +54,10 @@
 		D92B785926D689A000217013 /* YHThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHThread.h; sourceTree = "<group>"; };
 		D92B785A26D689A000217013 /* YHThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHThread.m; sourceTree = "<group>"; };
 		D9473B45EEE48E5E481CDEB7 /* Pods-INT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INT.release.xcconfig"; path = "Target Support Files/Pods-INT/Pods-INT.release.xcconfig"; sourceTree = "<group>"; };
+		D95B2E4D272651A8003D4001 /* ObserveController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObserveController.h; sourceTree = "<group>"; };
+		D95B2E4E272651A8003D4001 /* ObserveController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObserveController.m; sourceTree = "<group>"; };
+		D97A6186271EDDF0005EF211 /* LockController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LockController.h; sourceTree = "<group>"; };
+		D97A6187271EDDF0005EF211 /* LockController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LockController.m; sourceTree = "<group>"; };
 		D994308A26D8E3D500950695 /* RuntimeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeController.h; sourceTree = "<group>"; };
 		D994308B26D8E3D500950695 /* RuntimeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeController.m; sourceTree = "<group>"; };
 		D9A71D8C26DCBED600A1AE3F /* KeyWordController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyWordController.h; sourceTree = "<group>"; };
@@ -245,12 +251,16 @@
 				D9B6455B26E212AC00F56C8C /* AssociatedController.m */,
 				D9ABFBFB26E7113300BAD835 /* CategoryController.h */,
 				D9ABFBFC26E7113300BAD835 /* CategoryController.m */,
+				D97A6186271EDDF0005EF211 /* LockController.h */,
+				D97A6187271EDDF0005EF211 /* LockController.m */,
 				D9ABFBFE26E84CE600BAD835 /* LeaksController.h */,
 				D9ABFBFF26E84CE600BAD835 /* LeaksController.m */,
 				D9ABFC0426E84D7E00BAD835 /* UIViewController+Leaks.h */,
 				D9ABFC0526E84D7E00BAD835 /* UIViewController+Leaks.m */,
 				D9ABFC0D26E85DD600BAD835 /* UINavigationController+Leaks.h */,
 				D9ABFC0E26E85DD600BAD835 /* UINavigationController+Leaks.m */,
+				D95B2E4D272651A8003D4001 /* ObserveController.h */,
+				D95B2E4E272651A8003D4001 /* ObserveController.m */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -385,6 +395,8 @@
 				D9BB4F8526CE33C000BB7914 /* DescriptionProtocol.swift in Sources */,
 				D9BB4FA126CE45A800BB7914 /* BlockController.m in Sources */,
 				D9BB4F8826CE33C000BB7914 /* Define.swift in Sources */,
+				D95B2E4F272651A8003D4001 /* ObserveController.m in Sources */,
+				D97A6188271EDDF0005EF211 /* LockController.m in Sources */,
 				D9BB4F9026CE373800BB7914 /* CFunc.swift in Sources */,
 				D9BB4F7E26CE2F7E00BB7914 /* YHNavigationController.swift in Sources */,
 				D9ABFC0F26E85DD600BAD835 /* UINavigationController+Leaks.m in Sources */,

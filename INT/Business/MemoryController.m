@@ -9,7 +9,7 @@
 #import "Person.h"
 
 @interface MemoryController ()
-
+@property (nonatomic, strong) NSString *str;
 @end
 
 @implementation MemoryController
@@ -25,9 +25,27 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self test1];
+    [self test3];
 }
 
+- (void)test3 {
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+    for (int i = 0; i < 10000; i++) {
+        dispatch_async(queue, ^{
+            self.str = [NSString stringWithFormat:@"abc"];
+        });
+    }
+}
+
+- (void)test2 {
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+    for (int i = 0; i < 10000; i++) {
+        dispatch_async(queue, ^{
+            self.str = [NSString stringWithFormat:@"abcdefghijk"];
+//            self.str = @"abcdefghijk";
+        });
+    }
+}
 
 /**
  输出：24---16---24---24---16---

@@ -13,6 +13,11 @@
     NSLog(@"[%@]: %s  %@", [self class], __FUNCTION__, self.name);
 }
 
+- (void)setObserveTest:(NSString *)observeTest {
+    _observeTest = observeTest;
+    NSLog(@"come here => %s", __FUNCTION__);
+}
+
 - (void)dealloc {
     NSLog(@"%s", __FUNCTION__);
 }

@@ -51,6 +51,37 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
-
+    func scene(_ scene: UIScene, willContinueUserActivityWithType userActivityType: String) {
+        printLog(#function)
+    }
+    
+    override func updateUserActivityState(_ activity: NSUserActivity) {
+        printLog(#function)
+    }
+    
+    func stateRestorationActivity(for scene: UIScene) -> NSUserActivity? {
+        printLog(#function)
+        return nil
+    }
+    
+    override func restoreUserActivityState(_ activity: NSUserActivity) {
+        printLog(#function)
+    }
+    
+    func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
+        printLog(#function)
+        let nav = window?.rootViewController as? UINavigationController
+        let v = UIViewController()
+        v.view.backgroundColor = .red
+        nav?.pushViewController(v, animated: true)
+    }
+    
+    func scene(_ scene: UIScene, didUpdate userActivity: NSUserActivity) {
+        printLog(#function)
+    }
+    
+    func scene(_ scene: UIScene, restoreInteractionStateWith stateRestorationActivity: NSUserActivity) {
+        printLog(#function)
+    }
 }
 

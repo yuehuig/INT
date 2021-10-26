@@ -13,7 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, assign) NSInteger age;
+@property (nonatomic, copy) NSString *observeTest;
 
+@property (nonatomic, copy) void(^block)(void);
 - (void)sayHi;
 
 @end

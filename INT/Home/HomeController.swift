@@ -21,6 +21,8 @@ class HomeController: BaseViewController {
         HomeListModel(name: "Associated", isOC: true),
         HomeListModel(name: "Category", isOC: true),
         HomeListModel(name: "Leaks", isOC: true),
+        HomeListModel(name: "Lock", isOC: true),
+        HomeListModel(name: "Observe", isOC: true),
         
     ]
     

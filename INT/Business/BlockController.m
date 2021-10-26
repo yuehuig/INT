@@ -12,6 +12,7 @@
 @property (nonatomic, copy) void(^blk)(void);
 
 @property (nonatomic, copy) int(^blk1)(int);
+@property (nonatomic, strong) Person *p;
 
 @end
 
@@ -23,7 +24,43 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self test1];
+    [self test4];
+}
+
+- (void)test5 {
+    Person *p = [[Person alloc]init];
+    p.name = @"Hello World";
+    
+//    __weak typeof(p) weakP = p;
+    p.block = ^{
+//        __strong typeof(weakP) strongP = weakP;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            
+//            NSLog(@"my name is = %@", strongP.name);
+            NSLog(@"my name is = %@", p.name);
+        });
+    };
+//    p.block();
+//    self.p = p;
+}
+
+- (void)test4 {
+    Person *p = [[Person alloc]init];
+    p.name = @"Hello World";
+    
+    __weak typeof(p) weakP = p;
+    p.block = ^{
+        __strong typeof(weakP) strongP = weakP;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            
+            NSLog(@"my name is = %@", strongP.name);
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                
+                NSLog(@"2  my name is = %@", strongP.name);
+            });
+        });
+    };
+    p.block();
 }
 
 // result is 24, block type is <__NSMallocBlock__: 0x600000ac0210>
@@ -118,6 +155,10 @@ void(^block6)(void) = ^{
     
     NSLog(@"✅【block7】为：%@", [block7 class]);   //   __NSGlobalBlock__
 
+}
+
+- (void)dealloc {
+    NSLog(@"%s", __FUNCTION__);
 }
 
 @end
