@@ -23,6 +23,7 @@ class HomeController: BaseViewController {
         HomeListModel(name: "Leaks", isOC: true),
         HomeListModel(name: "Lock", isOC: true),
         HomeListModel(name: "Observe", isOC: true),
+        HomeListModel(name: "Notification", isOC: true),
         
     ]
     
