@@ -42,6 +42,7 @@
 		D9BB4F9E26CE459300BB7914 /* RunLoopController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BB4F9D26CE459300BB7914 /* RunLoopController.m */; };
 		D9BB4FA126CE45A800BB7914 /* BlockController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BB4FA026CE45A800BB7914 /* BlockController.m */; };
 		D9BB4FA426CE461000BB7914 /* EventResponderController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BB4FA326CE461000BB7914 /* EventResponderController.m */; };
+		D9D6C3842730EBED009D3EF0 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D6C3832730EBED009D3EF0 /* NotificationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +106,8 @@
 		D9BB4FA026CE45A800BB7914 /* BlockController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockController.m; sourceTree = "<group>"; };
 		D9BB4FA226CE461000BB7914 /* EventResponderController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventResponderController.h; sourceTree = "<group>"; };
 		D9BB4FA326CE461000BB7914 /* EventResponderController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventResponderController.m; sourceTree = "<group>"; };
+		D9D6C3822730EBED009D3EF0 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		D9D6C3832730EBED009D3EF0 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +264,8 @@
 				D9ABFC0E26E85DD600BAD835 /* UINavigationController+Leaks.m */,
 				D95B2E4D272651A8003D4001 /* ObserveController.h */,
 				D95B2E4E272651A8003D4001 /* ObserveController.m */,
+				D9D6C3822730EBED009D3EF0 /* NotificationController.h */,
+				D9D6C3832730EBED009D3EF0 /* NotificationController.m */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -407,6 +412,7 @@
 				D9BB4F9B26CE443A00BB7914 /* OCBaseController.m in Sources */,
 				D92B785B26D689A000217013 /* YHThread.m in Sources */,
 				D9BB4F8626CE33C000BB7914 /* Logging.swift in Sources */,
+				D9D6C3842730EBED009D3EF0 /* NotificationController.m in Sources */,
 				D9ABFC0026E84CE600BAD835 /* LeaksController.m in Sources */,
 				D994308C26D8E3D500950695 /* RuntimeController.m in Sources */,
 				D9BB4FA426CE461000BB7914 /* EventResponderController.m in Sources */,

@@ -19,8 +19,22 @@
     self.person = [Person new];
     self.person.observeTest = @"observeTest_1";
     [self.person addObserver:self forKeyPath:@"observeTest" options:NSKeyValueObservingOptionNew context:NULL];
+    [self.person addObserver:self forKeyPath:@"observeTest" options:NSKeyValueObservingOptionNew context:NULL];
+    [self.person addObserver:self forKeyPath:@"observeTest" options:NSKeyValueObservingOptionNew context:NULL];
 }
 
+/**
+ * 未实现 observeValueForKeyPath 会造成崩溃
+ *
+ *** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '<ObserveController: 0x7fcb3070f750>: An -observeValueForKeyPath:ofObject:change:context: message was received but not handled.
+ Key path: observeTest
+ Observed object: <Person: 0x600003982f40>
+ Change: {
+     kind = 1;
+     new = "observeTest_2";
+ }
+ Context: 0x0'
+ */
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     NSLog(@"observe => %@", change);
 }
@@ -54,6 +68,13 @@
 }
 
 - (void)dealloc {
+    /**
+     ⚠️⚠️⚠️ 切记不能多次移除观察者 会报如下错误
+     
+     [general] Caught exception during runloop's autorelease pool drain of client objects NSRangeException: Cannot remove an observer <ObserveController 0x7fbbb83130e0> for the key path "observeTest" from <Person 0x600003aa26d0> because it is not registered as an observer. userInfo: (null)
+     2021-11-10 10:36:44.674856+0800 INT[70986:7808838] *** Terminating app due to uncaught exception 'NSRangeException', reason: 'Cannot remove an observer <ObserveController 0x7fbbb83130e0> for the key path "observeTest" from <Person 0x600003aa26d0> because it is not registered as an observer.'
+     */
+//    [self.person removeObserver:self forKeyPath:@"observeTest"];
     [self.person removeObserver:self forKeyPath:@"observeTest"];
 }
 

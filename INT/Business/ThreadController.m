@@ -30,7 +30,8 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self.thread start];
+//    [self.thread start]
+    [self test1];
 }
 
 - (void)runThread:(NSString *)str {
@@ -140,7 +141,23 @@
     NSLog(@"%@ 解锁 lock2", [NSThread currentThread]);
 }
 
-
+/**
+ *直接执行  崩溃信息如下 线程未保活，start之后就销毁了  需保活
+ *
+ *** Terminating app due to uncaught exception 'NSDestinationInvalidException', reason: '*** -[ThreadController performSelector:onThread:withObject:waitUntilDone:modes:]: target thread exited while waiting for the perform'
+ */
+- (void)test1 {
+    NSThread *thread = [[NSThread alloc] initWithBlock:^{
+        NSLog(@"1");
+        
+        /// 线程保活
+//        [[NSRunLoop currentRunLoop] addPort:[NSPort port] forMode:NSDefaultRunLoopMode];
+//        [[NSRunLoop currentRunLoop] run];
+    }];
+    [thread start];
+    
+    [self performSelector:@selector(doSomething) onThread:thread withObject:nil waitUntilDone:YES];
+}
 
 - (void)dealloc {
     NSLog(@"%s", __FUNCTION__);

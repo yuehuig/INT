@@ -10,8 +10,13 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
-
+    
+    /// 后台运行
+    private var backgroundTaskIdentifier: UIBackgroundTaskIdentifier = UIBackgroundTaskIdentifier(rawValue: -999)
+    /// 后台运行timer
+    private var backTimer: Timer?
+    /// 后台运行倒计时变量
+    private var backTime: TimeInterval = kBackgroundRunTime
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
@@ -49,6 +54,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+        backTime = kBackgroundRunTime
+        backgroundTaskIdentifier = UIApplication.shared.beginBackgroundTask(expirationHandler: {
+            self.endBackgroundTask()
+        })
+        backTimer = Timer.scheduledTimer(timeInterval: 1.0,
+                                         target: self,
+                                         selector: #selector(backGroundTask(timer:)),
+                                         userInfo: nil,
+                                         repeats: true)
     }
 
     func scene(_ scene: UIScene, willContinueUserActivityWithType userActivityType: String) {
@@ -82,6 +96,26 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func scene(_ scene: UIScene, restoreInteractionStateWith stateRestorationActivity: NSUserActivity) {
         printLog(#function)
+    }
+    
+    /// 后台任务处理
+    @objc private func backGroundTask(timer: Timer) {
+        backTime -= 1
+        if backTime == 0 {
+            endBackgroundTask()
+        }
+        let backgroundTimeRemaining = UIApplication.shared.backgroundTimeRemaining
+        printLog(String(format: "Background Timer Remaining -- %.02f", backgroundTimeRemaining))
+    }
+    
+    /// 结束后台任务
+    private func endBackgroundTask() {
+        backTimer?.invalidate()
+        backTimer = nil
+        if backgroundTaskIdentifier != UIBackgroundTaskIdentifier.invalid {
+            UIApplication.shared.endBackgroundTask(backgroundTaskIdentifier)
+        }
+        backgroundTaskIdentifier = UIBackgroundTaskIdentifier.invalid
     }
 }
 

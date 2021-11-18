@@ -6,6 +6,7 @@
 //
 
 #import "KeyWordController.h"
+#import "Person.h"
 
 static int age = 10;
 
@@ -46,6 +47,7 @@ static int age = 10;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self test1];
+    [self test2];
 }
 
 - (void)test1 {
@@ -59,5 +61,16 @@ static int age = 10;
     [[TEMPPerson new] wy_add];
 }
 
+- (void)test2 {
+    Person *p1 = [Person new];
+    Person *p2 = [Person new];
+    
+    p1.testCopy = @"xxx";
+    p2.testCopy = p1.testCopy;
+    NSLog(@"=> %@, %@", p1.testCopy, p2.testCopy);
+    
+    p2.testCopy = @"yyy";
+    NSLog(@"=> %@, %@", p1.testCopy, p2.testCopy);
+}
 
 @end

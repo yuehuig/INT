@@ -275,7 +275,7 @@
 }
 
 - (void)barrierReadAction {
-    dispatch_async(self.queue, ^{
+    dispatch_sync(self.queue, ^{
         sleep(1);
         NSLog(@"barrier Read Action %@", [NSThread currentThread]);
     });
