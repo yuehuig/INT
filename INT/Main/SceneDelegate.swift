@@ -48,6 +48,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneWillEnterForeground(_ scene: UIScene) {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
+        endBackgroundTask()
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
@@ -112,6 +113,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func endBackgroundTask() {
         backTimer?.invalidate()
         backTimer = nil
+        if backgroundTaskIdentifier.rawValue == -999 {
+            return
+        }
         if backgroundTaskIdentifier != UIBackgroundTaskIdentifier.invalid {
             UIApplication.shared.endBackgroundTask(backgroundTaskIdentifier)
         }
