@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B80C3B84892A58ABDD6B09F /* Pods_INT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9380BAFB751BD738B0B8B8 /* Pods_INT.framework */; };
+		D91185192758B8AE009499D0 /* APMController.m in Sources */ = {isa = PBXBuildFile; fileRef = D91185182758B8AE009499D0 /* APMController.m */; };
 		D91848E426D33A120078C55C /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = D91848E326D33A120078C55C /* Person.m */; };
 		D92B785826D6870B00217013 /* ThreadController.m in Sources */ = {isa = PBXBuildFile; fileRef = D92B785726D6870B00217013 /* ThreadController.m */; };
 		D92B785B26D689A000217013 /* YHThread.m in Sources */ = {isa = PBXBuildFile; fileRef = D92B785A26D689A000217013 /* YHThread.m */; };
@@ -49,6 +50,9 @@
 /* Begin PBXFileReference section */
 		4D9380BAFB751BD738B0B8B8 /* Pods_INT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_INT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BBB6EC7DE8902F55995EC27 /* Pods-INT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INT.debug.xcconfig"; path = "Target Support Files/Pods-INT/Pods-INT.debug.xcconfig"; sourceTree = "<group>"; };
+		D91185172758B8AE009499D0 /* APMController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APMController.h; sourceTree = "<group>"; };
+		D91185182758B8AE009499D0 /* APMController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APMController.m; sourceTree = "<group>"; };
+		D911851A2759B6CC009499D0 /* FBPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FBPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D91848E226D33A120078C55C /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		D91848E326D33A120078C55C /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		D92B785626D6870B00217013 /* ThreadController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadController.h; sourceTree = "<group>"; };
@@ -277,6 +281,9 @@
 				D95B2E4E272651A8003D4001 /* ObserveController.m */,
 				D9D6C3822730EBED009D3EF0 /* NotificationController.h */,
 				D9D6C3832730EBED009D3EF0 /* NotificationController.m */,
+				D91185172758B8AE009499D0 /* APMController.h */,
+				D91185182758B8AE009499D0 /* APMController.m */,
+				D911851A2759B6CC009499D0 /* FBPlayground.playground */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -409,6 +416,7 @@
 				D9B6455926E2123F00F56C8C /* MemoryController.m in Sources */,
 				D91848E426D33A120078C55C /* Person.m in Sources */,
 				D9BB4F8526CE33C000BB7914 /* DescriptionProtocol.swift in Sources */,
+				D91185192758B8AE009499D0 /* APMController.m in Sources */,
 				D9BB4FA126CE45A800BB7914 /* BlockController.m in Sources */,
 				D9BB4F8826CE33C000BB7914 /* Define.swift in Sources */,
 				D95B2E4F272651A8003D4001 /* ObserveController.m in Sources */,
