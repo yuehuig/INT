@@ -7,6 +7,7 @@
 
 #import "ThreadController.h"
 #import "YHThread.h"
+#import "Person.h"
 
 @interface ThreadController ()
 @property (nonatomic, strong) YHThread *thread;
@@ -157,6 +158,23 @@
     [thread start];
     
     [self performSelector:@selector(doSomething) onThread:thread withObject:nil waitUntilDone:YES];
+}
+
+- (void)test2 {
+    NSMutableArray *arr = [NSMutableArray array];
+    dispatch_queue_t queue = dispatch_queue_create("cur", DISPATCH_QUEUE_CONCURRENT);
+    Person *p = [Person new];
+    Person *p1 = [Person new];
+    for (int i = 0; i < 200; i++) {
+        dispatch_async(queue, ^{
+//            @synchronized (self) {
+            // in -[__NSArrayM insertObject:atIndex:] ()
+//            [arr addObject:p1]; // 崩溃 pointer being freed was not allocated
+//            [arr addObject:@"123"]; // 崩溃 pointer being freed was not allocated
+//            p.age = arc4random_uniform(100); // 不会崩溃
+//            };
+        });
+    }
 }
 
 - (void)dealloc {

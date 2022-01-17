@@ -12,6 +12,7 @@
 		D92B785826D6870B00217013 /* ThreadController.m in Sources */ = {isa = PBXBuildFile; fileRef = D92B785726D6870B00217013 /* ThreadController.m */; };
 		D92B785B26D689A000217013 /* YHThread.m in Sources */ = {isa = PBXBuildFile; fileRef = D92B785A26D689A000217013 /* YHThread.m */; };
 		D95B2E4F272651A8003D4001 /* ObserveController.m in Sources */ = {isa = PBXBuildFile; fileRef = D95B2E4E272651A8003D4001 /* ObserveController.m */; };
+		D96803122751C7E3005359C4 /* EaseTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96803112751C7E3005359C4 /* EaseTestView.swift */; };
 		D97A6188271EDDF0005EF211 /* LockController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97A6187271EDDF0005EF211 /* LockController.m */; };
 		D994308C26D8E3D500950695 /* RuntimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D994308B26D8E3D500950695 /* RuntimeController.m */; };
 		D9A71D8E26DCBED600A1AE3F /* KeyWordController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A71D8D26DCBED600A1AE3F /* KeyWordController.m */; };
@@ -57,6 +58,7 @@
 		D9473B45EEE48E5E481CDEB7 /* Pods-INT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INT.release.xcconfig"; path = "Target Support Files/Pods-INT/Pods-INT.release.xcconfig"; sourceTree = "<group>"; };
 		D95B2E4D272651A8003D4001 /* ObserveController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObserveController.h; sourceTree = "<group>"; };
 		D95B2E4E272651A8003D4001 /* ObserveController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObserveController.m; sourceTree = "<group>"; };
+		D96803112751C7E3005359C4 /* EaseTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaseTestView.swift; sourceTree = "<group>"; };
 		D97A6186271EDDF0005EF211 /* LockController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LockController.h; sourceTree = "<group>"; };
 		D97A6187271EDDF0005EF211 /* LockController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LockController.m; sourceTree = "<group>"; };
 		D994308A26D8E3D500950695 /* RuntimeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeController.h; sourceTree = "<group>"; };
@@ -150,6 +152,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D968030E2751C73C005359C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D96803112751C7E3005359C4 /* EaseTestView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D9BB4F5326CE2E7700BB7914 = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +181,7 @@
 		D9BB4F5E26CE2E7700BB7914 /* INT */ = {
 			isa = PBXGroup;
 			children = (
+				D968030E2751C73C005359C4 /* View */,
 				D91848E126D33A000078C55C /* Model */,
 				D9BB4F9126CE3F4E00BB7914 /* Business */,
 				D9BB4F7A26CE2EFF00BB7914 /* Home */,
@@ -422,6 +433,7 @@
 				D9BB4F7926CE2EDE00BB7914 /* BaseViewController.swift in Sources */,
 				D9ABFC0626E84D7E00BAD835 /* UIViewController+Leaks.m in Sources */,
 				D9B6455C26E212AC00F56C8C /* AssociatedController.m in Sources */,
+				D96803122751C7E3005359C4 /* EaseTestView.swift in Sources */,
 				D9ABFBFD26E7113300BAD835 /* CategoryController.m in Sources */,
 				D9BB4F8C26CE349400BB7914 /* UIColor+YH.swift in Sources */,
 				D9BB4F8926CE33C000BB7914 /* Style.swift in Sources */,
