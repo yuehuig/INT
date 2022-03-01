@@ -37,8 +37,42 @@
 //    [self test5];
 }
 
+/**
+ dispatch_async global 不会执行log
+ sync 和 mainQueue 都会执行log方法
+ */
+- (void)test10 {
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+//        dispatch_queue_t queue = dispatch_get_main_queue();
+    dispatch_async(queue, ^{
+//    dispatch_sync(queue, ^{
+        [self performSelector:@selector(log) withObject:nil afterDelay:0];
+    });
+}
+
+/**
+ 打印顺序是 13245
+ 原因是:
+ 首先先打印 1
+ 接下来将任务 2 其添加至串行队列上，由于任务 2 是异步，不会阻塞线程，继续向下执行，打印 3 然后是任务 4,将任务 4 添加至串行队列上，因为任务 4 和任务 2 在同一串行队列，根据队列先进先出原则， 任务 4 必须等任务 2 执行后才能执行，又因为任务 4 是同步任务，会阻塞线程，只有执行完任务 4 才能继 续向下执行打印 5
+ 所以最终顺序就是 13245。
+ */
+- (void)test9 {
+    dispatch_queue_t serialQueue = dispatch_queue_create("test", DISPATCH_QUEUE_SERIAL);
+    NSLog(@"1");
+    dispatch_async(serialQueue, ^{
+        NSLog(@"2");
+    });
+    NSLog(@"3");
+    dispatch_sync(serialQueue, ^{
+        NSLog(@"4");
+    });
+    NSLog(@"5");
+}
+
 - (void)test8 {
     dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+//        dispatch_queue_t queue = dispatch_get_main_queue();
     NSLog(@"1");
     [self performSelector:@selector(log) withObject:nil afterDelay:0];
     dispatch_after(0, dispatch_get_main_queue(), ^{
@@ -53,6 +87,7 @@
 //        });
     });
     NSLog(@"4");
+    NSLog(@"5");
 }
 
 - (void)log {
@@ -157,7 +192,7 @@
  malloc: double free for ptr 0x7f857503d600
  
  1 多线程问题  加锁
- 2 内存问题  加autoreleasepoll
+ 2 内存问题  加autoreleasepool
  */
 - (void)test4 {
     //第1段代码

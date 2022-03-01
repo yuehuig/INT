@@ -25,6 +25,7 @@ class HomeController: BaseViewController {
         HomeListModel(name: "Observe", isOC: true),
         HomeListModel(name: "Notification", isOC: true),
         HomeListModel(name: "APM", isOC: true),
+        HomeListModel(name: "INT", isOC: true),
         
     ]
     

@@ -27,6 +27,20 @@
     [self test4];
 }
 
+- (void)test6 {
+    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"1", @"2", nil];
+    void(^block)(void) = ^{
+        NSLog(@"%@", arr);
+        [arr addObject:@"4"];
+    };
+    
+    [arr addObject:@"3"];
+    
+    arr = nil;
+    
+    block();
+}
+
 - (void)test5 {
     Person *p = [[Person alloc]init];
     p.name = @"Hello World";
